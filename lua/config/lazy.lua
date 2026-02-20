@@ -32,7 +32,7 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
-  install = { colorscheme = { "catppuccin" } },
+  -- install = { colorscheme = { "catppuccin" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
@@ -42,10 +42,31 @@ require("lualine").setup()
 
 -- Neotree
 require("neo-tree").setup({
-    close_if_last_window = true
+    close_if_last_window = true,
+    filesystem = {
+        filtered_items = {
+            visible = true,
+            hide_dotfiles = false,
+            hide_gitignored = true
+        }
+    }
 })
 
-vim.cmd.colorscheme("catppuccin")
+-- Bufferline
+require("bufferline").setup({
+    options = {
+        offsets = {
+            {
+                filetype = "neo-tree",
+                text = "File Explorer",
+                highlight = "Directory",
+                separator = true -- use a "true" to enable the default, or set your own character
+            }
+        }
+    }
+}
+)
+
 
 -- Setup Clangd LSP 
 vim.lsp.config("clangd", {
