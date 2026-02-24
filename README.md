@@ -7,3 +7,4 @@
 # Notes
 - The compile_commands.json must be symlinked to the project root dir for clangd LSP to work
   - Such as: `ln -s build/compile_commands.json .`
+- Depends on clangd running for LSP support
