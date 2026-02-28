@@ -21,7 +21,6 @@ vim.g.maplocalleader = "\\"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-vim.cmd("syntax on")
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -85,6 +84,12 @@ vim.lsp.config("clangd", {
 })
 vim.lsp.enable("clangd")
 
+-- Start treesitter automatically
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'cpp', 'c', 'h', 'hpp' },
+  callback = function() vim.treesitter.start() end,
+})
+
 -- Setup Keymaps
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to Declaration" })
@@ -98,3 +103,4 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>i", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Reveal diagnostic info" })
 
+vim.cmd[[colorscheme catppuccin]] 
