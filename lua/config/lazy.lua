@@ -32,10 +32,12 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
-  -- install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "kanagawa-dragon" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+vim.cmd[[colorscheme kanagawa-dragon]] 
 
 -- Lualine
 require("lualine").setup()
@@ -103,4 +105,3 @@ vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>i", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Reveal diagnostic info" })
 
-vim.cmd[[colorscheme catppuccin]] 

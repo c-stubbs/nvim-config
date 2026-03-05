@@ -12,6 +12,9 @@
 3. `sudo fc-cache -fv`
 4. Update your font in your terminal emulator
 
+## Install ripgrep
+1. `sudo apt install rpigrep`
+
 ## Clone this Repo
 1. `mkdir -p ~/.config/nvim/`
 2. `git clone https://github.com/c-stubbs/nvim-config.git ~/.config/nvim/`
