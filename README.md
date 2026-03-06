@@ -15,6 +15,12 @@
 ## Install ripgrep
 1. `sudo apt install rpigrep`
 
+## Install Treesitter
+1. Follow directions from [here](https://github.com/nvim-treesitter/nvim-treesitter/tree/main)
+
+## Install clangd
+1. `sudo apt install clangd`
+
 ## Clone this Repo
 1. `mkdir -p ~/.config/nvim/`
 2. `git clone https://github.com/c-stubbs/nvim-config.git ~/.config/nvim/`

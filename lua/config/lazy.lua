@@ -104,4 +104,6 @@ vim.keymap.set("n", "<leader>f", "<cmd>Neotree toggle<CR>", { desc = "Toggle the
 vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { silent = true })
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { silent = true })
 vim.keymap.set("n", "<leader>i", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Reveal diagnostic info" })
+vim.keymap.set("n", "<leader>lf", "<cmd>Telescope find_files<CR>", { desc = "Look for files" })
+vim.keymap.set("n", "<leader>ls", "<cmd>Telescope live_grep<CR>", { desc = "Look for string" })
 
